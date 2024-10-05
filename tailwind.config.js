@@ -10,14 +10,14 @@ module.exports = {
           '100%': { letterSpacing: '8px'},
         },
         link: {
-          '0%': { transform: translateX('0px') },
-          '100%': { transform: translateX('5px') },
+          '0%': { transform: 'translateX(0px)' },
+          '100%': { transform: 'translateX(5px)' },
         },
       },
     },
     animation: {
       expand: 'expand 6s ease-in forwards',
-      link: 'link ease-in forwards',
+      link: 'link ease-in forwards',  
     },
   },
   plugins: [],
