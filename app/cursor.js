@@ -6,17 +6,22 @@ const CustomCursor = () => {
   const [path, setPath] = useState([]);
 
   useEffect(() => {
-    // This code runs only in the browser after the component has mounted
-    const handleMouseMove = (event) => {
-      const { clientX, clientY } = event;
-      setPath((prevPath) => [...prevPath, { x: clientX, y: clientY }]);
-    };
+    if (typeof window !== 'undefined') { // Ensure it's running on client side
+      const handleMouseMove = (event) => {
+        const { clientX, clientY } = event;
 
-    document.addEventListener('mousemove', handleMouseMove);
+        setPath((prevPath) => [
+          ...prevPath.slice(-30),  // Keep the last 30 points
+          { x: clientX, y: clientY },
+        ]);
+      };
 
-    return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-    };
+      document.addEventListener('mousemove', handleMouseMove);
+
+      return () => {
+        document.removeEventListener('mousemove', handleMouseMove);
+      };
+    }
   }, []);
 
   return (
@@ -39,7 +44,9 @@ const CustomCursor = () => {
         style={{ overflow: 'visible' }} // Allow drawing outside the normal viewbox
       >
         <path
-          d={path.map((point, index) => `${index === 0 ? 'M' : 'L'} ${point.x} ${point.y}`).join(' ')}
+          d={path.map((point, index) => 
+            `${index === 0 ? 'M' : 'L'} ${point.x} ${point.y}`
+          ).join(' ')}
           stroke="currentColor"
           strokeWidth="2"
           fill="none"
