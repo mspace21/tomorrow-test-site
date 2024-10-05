@@ -6,30 +6,30 @@ export default function Home() {
       {/* Navigation Box */}
       <nav className="fixed top-5 right-5 text-white p-4 rounded-lg shadow-lg">
         <ul className="flex flex-col space-y-2">
-          <li> 
-            <Link href="#home">
+          <li>
+            <a href="#home">
               <p className="hover:underline hover:transition-transform hover:translate-x-5">Home</p>
-            </Link>
+            </a>
           </li>
           <li>
-            <Link href="#about">
+            <a href="#about">
               <p className="hover:underline hover:transition-transform hover:translate-x-5">About</p>
-            </Link>
+            </a>
           </li>
           <li>
-            <Link href="#projects">
+            <a href="#projects">
               <p className="hover:underline hover:transition-transform hover:translate-x-5">Services</p>
-            </Link>
+            </a>
           </li>
           <li>
-            <Link href="#other">
+            <a href="#other">
               <p className="hover:underline hover:transition-transform hover:translate-x-5">Contact</p>
-            </Link>
+            </a>
           </li>
         </ul>
       </nav>
 
-      {/*Content Sections*/}
+      {/* Content Sections */}
       <div>
         {/* Section 1 */}
         <section id="home" className="min-h-screen flex flex-col items-center justify-center">
@@ -53,14 +53,11 @@ export default function Home() {
         {/* Section 4 */}
         <section id="other" className="min-h-screen flex flex-col items-center justify-center">
           <h2 className="text-4xl font-bold">Contact us!</h2>
-          <p className="mt-4 text-lg">
-            Visit our <Link href="https://www.facebook.com/profile.php?id=61563288622007">Facebook page</Link>
-          </p>
           <p>
             Visit our{' '}
-            <Link href="https://www.facebook.com/profile.php?id=61563288622007">
+            <a href="https://www.facebook.com/profile.php?id=61563288622007">
               Facebook page
-            </Link>
+            </a>
           </p>
           <button className="mt-6 bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition">
             Get in Touch
