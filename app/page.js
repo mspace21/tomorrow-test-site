@@ -11,22 +11,22 @@ export default function Home() {
         <ul className="flex flex-col space-y-2">
           <li>
             <a href="#home">
-              <p className="hover:underline hover:transition-transform hover:translate-x-5">Home</p>
+              <p className="hover:underline hover:animate-link">Home</p>
             </a>
           </li>
           <li>
             <a href="#about">
-              <p className="hover:underline hover:transition-transform hover:translate-x-5">About</p>
+              <p className="hover:underline hover:animate-link">About</p>
             </a>
           </li>
           <li>
             <a href="#projects">
-              <p className="hover:underline hover:transition-transform hover:translate-x-5">Services</p>
+              <p className="hover:underline hover:animate-link">Services</p>
             </a>
           </li>
           <li>
             <a href="#other">
-              <p className="hover:underline hover:transition-transform hover:translate-x-5">Contact</p>
+              <p className="hover:underline hover:animate-link">Contact</p>
             </a>
           </li>
         </ul>
