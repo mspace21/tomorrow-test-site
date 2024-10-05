@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       {/* Custom Cursor */} 
-      <CustomCursor />
+      <CustomCursor/>
 
       {/* Navigation Box */}
       <nav className="fixed top-5 right-5 text-white p-4 rounded-lg shadow-lg">
