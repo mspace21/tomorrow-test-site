@@ -45,14 +45,17 @@ export default function Home() {
 
         {/* Section 3 */}
         <section id="projects" className="min-h-screen flex flex-col items-center justify-center">
-          <h2 className="text-4xl font-bold">Our Services</h2>
-          <p className="mt-4 text-lg">We offer a range of amazing services.</p>
+          <h2 className="text-4xl font-bold">Planned Projects</h2>
+          <p className="mt-4 text-lg">We are planning projects!</p>
+          <button>Learn more</button>
         </section>
 
         {/* Section 4 */}
         <section id="other" className="min-h-screen flex flex-col items-center justify-center">
-          <h2 className="text-4xl font-bold">Contact Us</h2>
-          <p className="mt-4 text-lg">Feel free to reach out to us!</p>
+          <h2 className="text-4xl font-bold">Contact us!</h2>
+          <p className="mt-4 text-lg">
+            Visit our <link href="https://www.facebook.com/profile.php?id=61563288622007">Facebook page</link>
+          </p>
           <button className="mt-6 bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition">
             Get in Touch
           </button>
