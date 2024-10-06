@@ -6,12 +6,12 @@ const CustomCursor = () => {
   const [path, setPath] = useState([]);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') { // Ensure it's running on client side
+    if (typeof window !== 'undefined') {
       const handleMouseMove = (event) => {
         const { clientX, clientY } = event;
 
         setPath((prevPath) => [
-          ...prevPath.slice(-30),  // Keep the last 30 points
+          ...prevPath.slice(-30),  // Keep only the last (n) points so it doesn't crash your computer
           { x: clientX, y: clientY },
         ]);
       };
@@ -25,32 +25,46 @@ const CustomCursor = () => {
   }, []);
 
   return (
+    // 
     <div
-      className="absolute pointer-events-none"
+      className="fixed pointer-events-none"
       style={{
         top: 0,
         left: 0,
         width: '100%',
         height: '100%',
-        zIndex: 1,
+        zIndex: 9999, // Render on top of every other element
       }}
     >
       <svg
         className="absolute"
         width="100%"
         height="100%"
-        viewBox="0 0 100 100"
-        preserveAspectRatio="none"
-        style={{ overflow: 'visible' }} // Allow drawing outside the normal viewbox
+        style={{ overflow: 'visible' }}
       >
-        <path
-          d={path.map((point, index) => 
-            `${index === 0 ? 'M' : 'L'} ${point.x} ${point.y}`
-          ).join(' ')}
-          stroke="currentColor"
-          strokeWidth="2"
-          fill="none"
-        />
+
+
+        {/* Render each line segment between points with varying opacity */}
+        {path.map((point, index) => {
+          if (index === 0) return null; // Skip the first point
+          const prevPoint = path[index - 1];
+          const opacity = (index / path.length).toFixed(2); // Calculate opacity (older points are more transparent)
+          const color = "white"; // this can be changed to any color
+          
+
+          return (
+            <line
+              key={index}
+              x1={prevPoint.x}
+              y1={prevPoint.y}
+              x2={point.x}
+              y2={point.y}
+              stroke={color}
+              strokeWidth="2"
+              strokeOpacity={opacity} // Set opacity based on the index
+            />
+          );
+        })}
       </svg>
     </div>
   );

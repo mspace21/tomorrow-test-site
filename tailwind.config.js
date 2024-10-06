@@ -1,6 +1,10 @@
+const {nextui} = require('@nextui-org/theme');
 module.exports = {
+  darkMode: 'selector',
   content: [
-    './app/**/*.{js,ts,jsx,tsx}', // Include app folder in purge paths
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "// Include app folder in purge paths",
+    "./node_modules/@nextui-org/theme/dist/components/[object Object].js"
   ],
   theme: {
     extend: {
@@ -17,8 +21,8 @@ module.exports = {
     },
     animation: {
       expand: 'expand 6s ease-in forwards',
-      link: 'link 1s ease-in forwards',  
+      link: 'link 0.1s ease-in forwards',  
     },
   },
-  plugins: [],
+  plugins: [nextui()],
 };
