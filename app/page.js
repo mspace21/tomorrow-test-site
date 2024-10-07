@@ -5,6 +5,7 @@ import { Switch } from "@nextui-org/switch";
 import { FaSun, FaMoon } from "react-icons/fa";
 import CustomCursor from './cursor.js';
 import { useState } from 'react';
+import { Button, ButtonGroup } from '@nextui-org/switch';
 
 function getThumbIcon({ isSelected, className }) {
   if (isSelected) {
@@ -81,12 +82,9 @@ export default function Home() {
           <h2 className="text-4xl font-bold">Contact us!</h2>
           <p>
             Visit our{' '}
-            <button
-              className="mt-6 bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition"
-              href="https://www.facebook.com/profile.php?id=61563288622007"
-            >
-              Facebook page
-            </button>
+            <Link href="facebook.com">
+              <Button color="blue" variant="solid">Facebook Page</Button>
+            </Link>
           </p>
         </section>
       </div>
