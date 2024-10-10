@@ -7,17 +7,20 @@
   --foreground: hsl(0, 0%, 9%);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.theme-dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #f0f4ff, #c1d3fe);
+  transition: background 0.5s ease;
+  font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+}
+
+body.theme-dark {
+  background: linear-gradient(135deg, #111111, #333333);
 }
 
 @layer utilities {
@@ -29,4 +32,3 @@ body {
 html {
   scroll-behavior: smooth;
 }
-

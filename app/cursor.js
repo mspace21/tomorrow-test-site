@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import { theme } from './page.js';
 
 const CustomCursor = () => {
   const [path, setPath] = useState([]);
@@ -59,7 +60,7 @@ const CustomCursor = () => {
               y1={prevPoint.y}
               x2={point.x}
               y2={point.y}
-              stroke={color}
+              stroke={theme}
               strokeWidth="2"
               strokeOpacity={opacity} // Set opacity based on the index
             />
