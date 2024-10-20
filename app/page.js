@@ -74,18 +74,18 @@ export default function Home() {
           <Button
             className="transition transform hover:scale-105 bg-slate-500 hover:bg-blue-600 hover:text-white py-3 px-6 rounded-lg"
             as="a"
-            href="#"
+            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
           >
             Learn more</Button>
         </section>
 
-        <section id="other" className="min-h-screen flex flex-col items-center justify-center">
+        <section id="other" className="min-h-screen flex flex-col space-y-10 items-center justify-center">
           <h2 className="text-4xl font-bold">Contact us!</h2>
           <p>
             Visit our{' '}
             <Button
-              className="transition transform bg-blue-700 hover:scale-105 hover:bg-blue-600 hover:text-white py-3 px-6 rounded-lg radius-full"
-              as="a"      // This ensures it's treated as a link
+              className=" bg-blue-700 hover:bg-blue-600 hover:text-white py-3 px-6 rounded-lg radius-full hover:expand 0.5s ease-in"
+              as="a"      // Linkifying the button
               href="https://www.facebook.com/profile.php?id=61563288622007"
               color="default"
               radius="full"

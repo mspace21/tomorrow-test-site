@@ -14,13 +14,13 @@
 
 body {
   color: var(--foreground);
-  background: linear-gradient(135deg, #f0f4ff, #c1d3fe);
+  background: linear-gradient(135deg, #c1d3fe, #f0f4ff);
   transition: background 0.5s ease;
   font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
 }
 
 body.theme-dark {
-  background: linear-gradient(135deg, #111111, #333333);
+  background: linear-gradient(135deg, #333333, #111111);
 }
 
 @layer utilities {

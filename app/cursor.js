@@ -50,7 +50,7 @@ const CustomCursor = () => {
           if (index === 0) return null; // Skip the first point
           const prevPoint = path[index - 1];
           const opacity = (index / path.length).toFixed(2); // Calculate opacity (older points are more transparent)
-          const color = "white"; // this can be changed to any color
+          const color = "#f34040"; // this can be changed to any color
           
 
           return (
@@ -60,7 +60,7 @@ const CustomCursor = () => {
               y1={prevPoint.y}
               x2={point.x}
               y2={point.y}
-              stroke={theme}
+              stroke={color}
               strokeWidth="2"
               strokeOpacity={opacity} // Set opacity based on the index
             />
