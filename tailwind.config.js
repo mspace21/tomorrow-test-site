@@ -14,8 +14,8 @@ module.exports = {
           '100%': { letterSpacing: '8px'},
         },
         link: {
-          '0%': { transform: 'translateX(0px)' },
-          '100%': { transform: 'translateX(12px)' },
+          '0%': { fontWeight: 100 },
+          '100%': { fontWeight: 700 },
         },
       },
     },
