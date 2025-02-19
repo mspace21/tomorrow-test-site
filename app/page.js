@@ -92,10 +92,6 @@ export default function Home() {
             </Button>
           </p>
         </section>
-        <section  id="talk-series" className="min-h-screen flex flex-col space-y-10 items-center justify-center">
-          <h1 className="text-5xl font-bold animate-expand">Talk Series</h1>
-            <CanvaEmbed url="https://www.canva.com/design/DAGYDpSMEok/HheWQ4OHEnxd-_NNTCiOQQ/view?embed" />
-        </section>
       </div>
     </>
   );
