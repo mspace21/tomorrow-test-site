@@ -17,6 +17,16 @@ module.exports = {
           '0%': { fontWeight: 100 },
           '100%': { fontWeight: 700 },
         },
+        colors: {
+          'background': '#1B1B1B',
+          'foreground': '#F8FAFC',
+          'primary': '#F1F1F1',
+          'primary_foreground': '#505050',
+          'secondary': '#F0F0FF',
+          'secondary_foreground': '#171717',
+          'muted': '#646464',
+          'muted_foreground': '#DBDCDD',
+        }
       },
     },
     animation: {
